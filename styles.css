@@ -1,0 +1,230 @@
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+  display: flex; /* Use flexbox for better positioning */
+  justify-content: space-between; /* Align items with space-between */
+  align-items: center; /* Align items vertically */
+  position: fixed;
+  width: 98.89%;
+  z-index: 2;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-bottom: 1px solid transparent; /* Add transparent border-bottom */
+  transition: border-color 0.3s; /* Add transition effect */
+}
+
+.navbar a:hover {
+  border-color: white; /* Change border-color to white on hover */
+}
+/* The dropdown container */
+.dropdown {
+  position: relative; /* Position dropdowns relative to the navbar */
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Add a red background color to navbar links on hover */
+.dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 10px; /* Add margin at the top */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:nth-last-child(3) .dropbtn {
+  margin-right: 30px;
+}
+
+.navbar a:nth-last-child(2) {
+  margin-left: 30px;
+}
+
+/* Style for each section */
+.section1,
+.section2,
+.section3,
+.dummy-div {
+  flex: 1; /* Make each section flexible to occupy equal space */
+  padding: 20px;
+  height: 100%; /* Ensure each section occupies full height of upper-section container */
+  overflow-y: auto; /* Enable vertical scrolling for sections */
+  background-color: black;
+  display: none;
+}
+
+/* Style for section 1 */
+.section1 {
+  color: white;
+  text-align: left; /* Align text to the left */
+  height: 100%; /* Ensure section 1 occupies full height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  display: flex; /* Use flexbox to align elements */
+  align-items: flex-start;
+}
+
+/* Hide scrollbar for section 1 */
+.section1::-webkit-scrollbar {
+  display: none;
+}
+
+/* Style for left half (text) */
+.left-half {
+  flex: 1; /* Occupy half of the section */
+  padding: 20px;
+  display: flex; /* Use flexbox to align text vertically */
+  flex-direction: column; /* Stack text vertically */
+  justify-content: flex-start; /* Align text to the start (top) */
+  max-width: 50%; /* Set maximum width for the text */
+  min-height: 70vh; /* Set minimum height for the left half container */
+}
+.left-half h6 {
+  font-size: 24px; /* Increase font size for h6 */
+  margin-bottom: 10px; /* Add bottom margin to h6 */
+}
+
+.left-half p {
+  margin-top: 0;
+  font-size: 48px;
+  max-width: 100%; /* Set maximum width for paragraphs */
+  word-wrap: break-word; /* Allow long words to wrap */
+}
+
+/* Style for right half */
+.right-half {
+  flex: 1; /* Occupy half of the section */
+  height: 100%; /* Occupy full height of the section */
+  display: flex; /* Use flexbox to align image */
+  justify-content: flex-start; /* Align image to the start (top) */
+  align-items: center; /* Align image to the start (left) */
+}
+
+/* used an imge to style the text then removed image instead of the quiz */
+.right-half img {
+  height: 70vh; /* Set height of the image to 70% of the viewport height */
+  max-width: 80%; /* Ensure image does not exceed container width */
+  object-fit: cover; /* Maintain aspect ratio and fit the image inside the container */
+}
+
+/* Style for section 2 */
+
+.section2 {
+  background-size: cover; /* Cover the entire section with the background image */
+  color: white; /* Text color */
+}
+
+/* Style for heading */
+.section2 h2 {
+  text-align: left; /* Align heading to the left */
+  margin: 0;
+}
+
+/* Style for "View All" link */
+.section2 a {
+  color: white; /* Link color */
+  text-align: right; /* Align link to the right */
+}
+
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 80vh; /* Set height to 80% of the viewport height */
+}
+
+/* Style for image cards */
+.img-cards {
+  display: flex; /* Use flexbox to align image cards side by side */
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.img-card {
+  flex: 0 0 calc(33.33% - 20px); /*to make the cards equally spaced*/
+  margin: 0 0 20px 0; /* Adjust margin as needed */
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.img-card img {
+  width: 100%; /* Set image width to 100% of the container */
+  height: 100%; /* Make images fill the height of the parent div */
+  object-fit: cover; /* Cover the entire div with the image */
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card-content p {
+  color: white;
+  margin: 0;
+}
+
+.card-content button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white; /* Text color */
+  border: 1px solid white;
+  padding: 5px 10px;
+}
+
+.section3 {
+  background-color: #f0f0f0;
+}
